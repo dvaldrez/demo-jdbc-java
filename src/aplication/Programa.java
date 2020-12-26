@@ -18,6 +18,10 @@ public class Programa {
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
+		seller = sellerDao.findById(4);
+		
+		System.out.println(seller);
+		
 		
 	}
 

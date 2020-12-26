@@ -12,7 +12,9 @@ public class Seller implements Serializable {
 	private String email;
 	private Date birthDate;
 	private Double baseSalary;
-	
+
+	private Deparment deparment;
+
 	public Seller() {
 		// TODO Auto-generated constructor stub
 	}
@@ -65,6 +67,14 @@ public class Seller implements Serializable {
 		this.baseSalary = baseSalary;
 	}
 
+	public Deparment getDeparment() {
+		return deparment;
+	}
+
+	public void setDeparment(Deparment deparment) {
+		this.deparment = deparment;
+	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -99,6 +109,5 @@ public class Seller implements Serializable {
 		return "Seller [id=" + id + ", nome=" + nome + ", email=" + email + ", birthDate=" + birthDate + ", baseSalary="
 				+ baseSalary + "]";
 	}
-	
-	
+
 }
