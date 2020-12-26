@@ -1,15 +1,18 @@
 package model.entities;
 
-public class Deparment {
-	
+import java.io.Serializable;
+
+public class Deparment implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
 	private Integer id;
 	private String name;
-	
+
 	public Deparment() {
 	}
 
 	public Deparment(Integer id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}
@@ -65,9 +68,5 @@ public class Deparment {
 	public String toString() {
 		return "Deparment [id=" + id + ", name=" + name + "]";
 	}
-	
-	
-	
-	
 
 }
