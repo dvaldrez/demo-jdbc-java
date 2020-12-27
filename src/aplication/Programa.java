@@ -1,6 +1,5 @@
 package aplication;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +14,7 @@ public class Programa {
 		Deparment dep = new Deparment(1, "books");
 		System.out.println(dep.toString());
 
-		Seller seller = new Seller(1, "Dennis", "d@ho", new Date(), 2500.00);
+		Seller seller = new Seller(1, "Dennis", "d@ho", new Date(), 2500.00, dep);
 		System.out.println(seller.toString());
         seller = null;
 		SellerDao sellerDao = DaoFactory.createSellerDao();
@@ -33,6 +32,19 @@ public class Programa {
 		}
 		System.out.println(seller);
 
+		List<Seller> list2 = sellerDao.findAll();
+		
+		for (Seller obj : list2) {
+			System.out.println(obj);
+		}
+		System.out.println(seller);
+
+		Seller sellerInsert = new Seller(null, "Giovana", "gi@hotmail", new Date(), 20000.00, dep2); 
+		sellerInsert.getDeparment().setId(2);
+		
+		sellerDao.insert(sellerInsert);
+		System.out.println("Funcional Gerada" + sellerInsert.getId());
+		
 	}
 
 }

@@ -19,12 +19,13 @@ public class Seller implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Seller(Integer id, String nome, String email, Date birthDate, Double baseSalary) {
+	public Seller(Integer id, String nome, String email, Date birthDate, Double baseSalary, Deparment deparment) {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.birthDate = birthDate;
 		this.baseSalary = baseSalary;
+		this.deparment = deparment;
 	}
 
 	public Integer getId() {
